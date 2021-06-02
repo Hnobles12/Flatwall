@@ -5,6 +5,7 @@ import click
 import os
 import cv2
 import numpy as np
+from typing import List
 #from . import _proc
 
 
@@ -40,7 +41,7 @@ class Color:
             raise Exception
 
 
-def create_wallpaper(resolution: list[int], color: Color):
+def create_wallpaper(resolution: List[int], color: Color):
     res = [resolution[1],resolution[0],3]
     img = np.full(res, color.bgr_array)
     return img
